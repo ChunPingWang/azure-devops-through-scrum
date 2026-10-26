@@ -1,0 +1,10 @@
+{
+  "name": "shopcart-service",
+  "version": "0.1.0",
+  "description": "ShopCart Scrum Demo - 購物車服務（Azure DevOps 教材範例）",
+  "main": "src/cart.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}

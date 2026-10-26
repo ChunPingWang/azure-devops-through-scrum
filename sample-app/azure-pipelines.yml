@@ -1,0 +1,22 @@
+# ShopCart CI Pipeline：每次推送到 main 或建立 PR 時自動建置與測試
+trigger:
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '20.x'
+    displayName: '安裝 Node.js 20'
+
+  - script: npm test
+    displayName: '執行單元測試'
